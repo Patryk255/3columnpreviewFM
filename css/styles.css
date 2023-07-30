@@ -24,6 +24,7 @@ body {
 }
 #container .categories {
   padding: 40px;
+  position: relative;
 }
 #container .categories h1 {
   font-family: "Big Shoulders Display", cursive;
@@ -43,9 +44,11 @@ body {
 #container .categories button {
   border: 1px solid white;
   border-radius: 20px;
-  width: 66%;
+  width: 140px;
   height: 40px;
-  margin-top: 50%;
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
   font-family: "Lexend Deca", sans-serif;
   background-color: hsl(0, 0%, 95%);
 }
@@ -104,6 +107,11 @@ body {
   }
   #container .categories button {
     margin-top: 30px;
+    left: 50px;
+    bottom: 40px;
+  }
+  #container .categories p {
+    margin-bottom: 50px;
   }
   .luxury {
     border-radius: 0px 0px 10px 10px;
