@@ -1,0 +1,116 @@
+/* For paragraphs */
+/* For background, headings, buttons */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: hsl(0, 0%, 95%);
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#container {
+  width: 900px;
+  height: 500px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "sedan suv luxury";
+  border-radius: 10px;
+  overflow: hidden;
+}
+#container .categories {
+  padding: 40px;
+}
+#container .categories h1 {
+  font-family: "Big Shoulders Display", cursive;
+  font-size: 40px;
+  text-transform: uppercase;
+  color: hsl(0, 0%, 95%);
+}
+#container .categories p {
+  font-size: 15px;
+  font-family: "Lexend Deca", sans-serif;
+  color: hsla(0, 0%, 100%, 0.75);
+  line-height: 1.6;
+  width: 90%;
+  text-align: left;
+  font-weight: 400;
+}
+#container .categories button {
+  border: 1px solid white;
+  border-radius: 20px;
+  width: 66%;
+  height: 40px;
+  margin-top: 50%;
+  font-family: "Lexend Deca", sans-serif;
+  background-color: hsl(0, 0%, 95%);
+}
+#container .sedan {
+  grid-area: sedan;
+  background-color: hsl(31, 77%, 52%);
+}
+#container .sedan button {
+  color: hsl(31, 77%, 52%);
+}
+#container .sedan button:hover {
+  background-color: hsl(31, 77%, 52%);
+  color: hsl(0, 0%, 95%);
+  cursor: pointer;
+}
+#container .suv {
+  grid-area: "suv";
+  background-color: hsl(184, 100%, 22%);
+}
+#container .suv button {
+  color: hsl(184, 100%, 22%);
+}
+#container .suv button:hover {
+  background-color: hsl(184, 100%, 22%);
+  color: hsl(0, 0%, 95%);
+  cursor: pointer;
+}
+#container .luxury {
+  grid-area: "luxury";
+  background-color: hsl(179, 100%, 13%);
+}
+#container .luxury button {
+  color: hsl(179, 100%, 13%);
+}
+#container .luxury button:hover {
+  background-color: hsl(179, 100%, 13%);
+  color: hsl(0, 0%, 95%);
+  cursor: pointer;
+}
+
+@media (width <= 500px) {
+  body {
+    height: 150vh;
+    align-items: baseline;
+  }
+  #container {
+    width: 90%;
+    height: auto;
+    margin-top: 30px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.33fr 0.33fr 0.33fr;
+    grid-template-areas: "sedan" "suv" "luxury";
+  }
+  #container .categories {
+    padding: 50px;
+  }
+  #container .categories button {
+    margin-top: 30px;
+  }
+  .luxury {
+    border-radius: 0px 0px 10px 10px;
+  }
+  .luxury button {
+    margin-top: 0px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

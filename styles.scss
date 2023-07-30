@@ -1,0 +1,133 @@
+$brightOrange: hsl(31, 77%, 52%);
+$darkCyan: hsl(184, 100%, 22%);
+$veryDarkCyan: hsl(179, 100%, 13%);
+$transparentWhite: hsla(0, 0%, 100%, 0.75); /* For paragraphs */
+$veryLightGray: hsl(0, 0%, 95%); /* For background, headings, buttons */
+
+$bigTextFont: "Big Shoulders Display", cursive;
+$smallTextFont: "Lexend Deca", sans-serif;
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: $veryLightGray;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#container {
+  width: 900px;
+  height: 500px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "sedan suv luxury";
+  border-radius: 10px;
+  overflow: hidden;
+
+  .categories {
+    padding: 40px;
+    h1 {
+      font-family: $bigTextFont;
+      font-size: 40px;
+      text-transform: uppercase;
+      color: $veryLightGray;
+    }
+    p {
+      font-size: 15px;
+      font-family: $smallTextFont;
+      color: $transparentWhite;
+      line-height: 1.6;
+      width: 90%;
+      text-align: left;
+      font-weight: 400;
+    }
+    button {
+      border: 1px solid white;
+      border-radius: 20px;
+      width: 66%;
+      height: 40px;
+      margin-top: 50%;
+      font-family: $smallTextFont;
+      background-color: $veryLightGray;
+    }
+  }
+
+  .sedan {
+    grid-area: sedan;
+    background-color: $brightOrange;
+
+    button {
+      color: $brightOrange;
+    }
+    button:hover {
+      background-color: $brightOrange;
+      color: $veryLightGray;
+      cursor: pointer;
+    }
+  }
+
+  .suv {
+    grid-area: "suv";
+    background-color: $darkCyan;
+    button {
+      color: $darkCyan;
+    }
+    button:hover {
+      background-color: $darkCyan;
+      color: $veryLightGray;
+      cursor: pointer;
+    }
+  }
+
+  .luxury {
+    grid-area: "luxury";
+    background-color: $veryDarkCyan;
+
+    button {
+      color: $veryDarkCyan;
+    }
+    button:hover {
+      background-color: $veryDarkCyan;
+      color: $veryLightGray;
+      cursor: pointer;
+    }
+  }
+}
+
+@media (width <= 500px) {
+  body {
+    height: 150vh;
+    align-items: baseline;
+  }
+
+  #container {
+    width: 90%;
+    height: auto;
+    margin-top: 30px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.33fr 0.33fr 0.33fr;
+    grid-template-areas:
+      "sedan"
+      "suv"
+      "luxury";
+    .categories {
+        padding: 50px;
+      button {
+        margin-top: 30px;
+      }
+    }
+  }
+  .luxury {
+    border-radius: 0px 0px 10px 10px;
+    button {
+      margin-top: 0px;
+    }
+  }
+}
+
